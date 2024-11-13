@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+        - name: hello-world-app
+          image: seu-usuario/hello-world-app:latest
+          ports:
+            - containerPort: 5000
+          env:
+            - name: CUSTOM_ENV_VAR
+              value: "SREHUBII"
