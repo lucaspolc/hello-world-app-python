@@ -1,10 +1,10 @@
-# Usando a imagem base do Python
+# Python
 FROM python:3.9-slim
 
-# Definir o diretório de trabalho
+# Diretório
 WORKDIR /app
 
-# Copiar o código da aplicação para o contêiner
+# COPY para Container
 COPY app.py /app
 
 # Instalar as dependências
